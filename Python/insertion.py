@@ -8,11 +8,4 @@ for i in range(1,n):
         j-=1
     array[j+1]=key
 print(array)
-    #i=1
-    #key=22
-    #j=0
-    #[j]=111
-    #111>22
-    #array[j+1]=array[j]
-    #111,111
-    #
+  

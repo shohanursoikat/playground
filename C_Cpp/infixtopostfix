@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+#define MAX 100
+
+// Stack structure for operators
+typedef struct {
+    char items[MAX];
+    int top;
+} Stack;
+
+// Stack functions
+void init(Stack *s) { s->top = -1; }
+int isEmpty(Stack *s) { return s->top == -1; }
+int isFull(Stack *s) { return s->top == MAX - 1; }
+void push(Stack *s, char c) {
+    if (!isFull(s)) s->items[++s->top] = c;
+}
+char pop(Stack *s) {
+    if (!isEmpty(s)) return s->items[s->top--];
+    return '\0';
+}
+char peek(Stack *s) {
+    if (!isEmpty(s)) return s->items[s->top];
+    return '\0';
+}
+
+// Function to return operator precedence
+int precedence(char op) {
+    switch(op) {
+        case '^': return 3;
+        case '*':
+        case '/': return 2;
+        case '+':
+        case '-': return 1;
+        default: return 0;
+    }
+}
+
+// Infix to Postfix conversion
+void infixToPostfix(char *infix, char *postfix) {
+    Stack s;
+    init(&s);
+    int k = 0;  // Index for postfix
+
+    push(&s, '(');                 // Push '(' as sentinel
+    strcat(infix, ")");             // Add ')' at the end
+
+    for (int i = 0; infix[i] != '\0'; i++) {
+        char sym = infix[i];
+
+        if (isalnum(sym)) {        // Operand → append to postfix
+            postfix[k++] = sym;
+        } else if (sym == '(') {   // Left parenthesis → push
+            push(&s, sym);
+        } else if (sym == ')') {   // Right parenthesis → pop until '('
+            while (peek(&s) != '(')
+                postfix[k++] = pop(&s);
+            pop(&s);               // Remove '('
+        } else {                    // Operator
+            while (precedence(peek(&s)) >= precedence(sym))
+                postfix[k++] = pop(&s);
+            push(&s, sym);
+        }
+    }
+    postfix[k] = '\0';  // Null terminate
+}
+
+// Main function
+int main() {
+    char infix[MAX], postfix[MAX];
+
+    printf("Enter infix expression: ");
+    scanf("%s", infix);
+
+    infixToPostfix(infix, postfix);
+
+    printf("Postfix expression: %s\n", postfix);
+    return 0;
+}

@@ -1,0 +1,14 @@
+beautifulsoup4==4.14.3
+browser-cookie3==0.20.1
+certifi==2026.2.25
+charset-normalizer==3.4.4
+idna==3.11
+lz4==4.4.5
+pycryptodomex==3.23.0
+pywin32==311
+requests==2.32.5
+shadowcopy==0.0.4
+soupsieve==2.8.3
+typing_extensions==4.15.0
+urllib3==2.6.3
+WMI==1.5.1

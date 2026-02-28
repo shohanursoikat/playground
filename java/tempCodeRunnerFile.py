@@ -1,0 +1,1 @@
+   passwords=[line.strip() for line in file]

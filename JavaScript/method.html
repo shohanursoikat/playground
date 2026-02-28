@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+                function event(doc, cve){
+                    this.doc = doc;
+                    this.cve = cve;
+                }
+                var vuln = new event("xss", "14321");
+                alert(vuln.doc);
+                alert(vuln.cve);
+            </script>
+        </body>
+
+    </head>
+</html>

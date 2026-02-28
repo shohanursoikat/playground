@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function vul(){
+
+            }
+            let v = new vul();
+            vul.prototype.vulnerable = function(){
+                alert('xss')
+            }
+            v.vulnerable();
+        </script>
+    </body>
+</html>

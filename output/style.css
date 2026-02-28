@@ -1,0 +1,151 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN BOX */
+.login-box {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 350px;
+  color: white;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: none;
+  border-radius: 6px;
+  background: #334155;
+  color: white;
+}
+
+.login-box input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box input[type="submit"]:hover {
+  background: #2563eb;
+}
+
+.login-box p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-box a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+/* SIGNUP BOX */
+.signup-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+  color: white;
+}
+
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-box form input[type="text"],
+.signup-box form input[type="email"],
+.signup-box form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+}
+
+.signup-box form input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #00c6ff;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.signup-box form input[type="submit"]:hover {
+  background: #0072ff;
+  color: #fff;
+}
+
+.signup-box p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-box a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+/* Password toggle icon */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+}

@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-cube",
+            "type": "shell",
+            "command": "C:/mingw-w64/bin/g++.exe",
+            "args": [
+                "main.cpp",
+                "-I", "C:/Users/hp/glfw-3.4.bin.WIN64/glfw-3.4.bin.WIN64/include/GLFW/glfw3.h",
+                "-I", "C:/Users/hp/glew-2.1.0-win32/glew-2.1.0/include/GL/glew.h",
+                "-L", "C:/Users/hp/glfw-3.4.bin.WIN64/glfw-3.4.bin.WIN64/lib-mingw-w64",
+                "-L", "C:/Users/hp/glew-2.1.0-win32/glew-2.1.0/lib/Release/Win32",
+                "-lglfw3",
+                "-lglew32",
+                "-lopengl32",
+                "-o",
+                "cube.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

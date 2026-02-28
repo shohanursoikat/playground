@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;    
+}
+img{
+    height: 300px;
+    background-color:slateblue;
+    padding-left: 100px;
+    place-self:inherit;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: red;
+    
+}

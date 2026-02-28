@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function vul(des,cve){
+                this.desc = des;
+                this.cves = cve;
+                
+            }
+            let v = new vul("xss", 24);
+            alert(v.desc)   
+            alert(v.cves)
+           
+            document.write(v.cves," ", v.desc)
+               
+            
+        </script>
+    </body>
+</html>
